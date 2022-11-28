@@ -1,3 +1,5 @@
+data "aws_organizations_organization" "current_org" {}
+
 resource "aws_budgets_budget" "total_cost" {
   name              = "budget-total-monthly-atf"
   budget_type       = "COST"
