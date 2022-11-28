@@ -8,7 +8,7 @@ data "external" "accounts" {
 locals {
    ou           = "ou-kfmq-hs0h7yjq"
    account_name = "demo-poste"
-   account_id   = lookup(data.external.tools_accounts.result, "Id", null)
+   account_id   = lookup(data.external.accounts.result, "Id", null)
 }
 // try external data source to get list-accounts-for-parent CLI command
 
