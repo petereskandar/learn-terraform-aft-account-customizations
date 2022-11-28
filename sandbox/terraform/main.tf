@@ -1,7 +1,5 @@
 data "aws_organizations_organization" "current_org" {}
 
-data "aws_caller_identity" "current" {}
-
 resource "aws_budgets_budget" "total_cost" {
   name              = "budget-total-monthly-atf"
   budget_type       = "COST"
