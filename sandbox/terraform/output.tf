@@ -6,7 +6,7 @@ output "current_org" {
 
 output "caller" {
   value = data.aws_caller_identity.current
-
+}
 
 /*output "account_info" {
   value = local.account_id
