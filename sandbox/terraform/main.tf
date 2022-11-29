@@ -3,7 +3,7 @@ data "aws_organizations_organization" "current_org" {}
 // try external data source to get list-accounts-for-parent CLI command
 data "external" "accounts" {
   #provider = aws.master-account
-  program = ["aws", "organizations", "list-accounts-for-parent", "--parent-id", local.ou, "--query", "Accounts[?Name==`${local.account_name}`] | [0]", "--debug"]
+  program = ["aws", "organizations", "list-accounts-for-parent", "--parent-id", local.ou, "--query", "Accounts[?Name==`${local.account_name}`] | [0]"]
 }
 
 locals {
