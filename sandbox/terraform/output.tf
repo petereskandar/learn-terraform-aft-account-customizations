@@ -4,9 +4,13 @@ output "current_org" {
   value = data.aws_organizations_organization.current_org
 }
 
-output "account_info" {
+output "caller" {
+  value = data.aws_caller_identity.current
+
+
+/*output "account_info" {
   value = local.account_id
-}
+}*/
 
 
 /*output "account_ids" {
