@@ -12,3 +12,17 @@ provider "aws" {
     }
   }
 }
+
+
+provider "aws" {
+  region = "{{ provider_region }}"
+  alias = "master-account"
+  assume_role {
+    role_arn    = "arn:aws:iam::250950161175:role/AWSAFTExecution"
+  }
+  default_tags {
+    tags = {
+      managed_by                  = "AFT"
+    }
+  }
+}
